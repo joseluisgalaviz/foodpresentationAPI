@@ -1,0 +1,181 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html{
+    background-color: #e6e6e6;
+}
+
+body{
+    font-family: "Lato",Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navigation{
+    top:0px;
+    left: 0px;
+    background-color: #2E2F30;
+    color:white;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top:5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+nav>ul>li{
+    margin-left: 5px;
+    display: inline-block;
+    list-style: none;
+}
+
+li>a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2em;
+}
+
+
+.peticiones {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px 5px;
+}
+
+.btn{
+    background-color: white;
+    border: 2px solid #666666;
+    color: #2E2F30;
+    padding: 3px 10px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: #666666;
+    color: white;
+    border: 2px solid #999999;
+}
+
+.form-peticiones{
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    text-align: left;
+    background-color: #ffff99;
+    border : 1px solid #e6e600;
+}
+
+.query-info{
+    padding: 5px 10px;
+    background-color: white;
+    border: 2px solid gray;
+}
+
+.recetas{
+    margin-top: 10px;
+}
+
+.receta{
+    margin-top: 5px;
+    background-color: white;
+    border: 2px solid darkslategray;
+}
+
+.receta>ul>li{
+    list-style: none;
+}
+
+.li-id{
+    font-weight: 700;
+}
+
+.li-title{
+    width: 80%;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.li-image {
+  padding: 5px 5px;
+}
+
+.li-image>img{
+
+    width: 20%;
+    height: 20%;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    border:2px dotted green;
+}
+
+.recipe-info{
+    margin: 5px 0px;
+ background-color: white;
+    border:2px solid darkslategray;
+}
+
+.recipe-data>ul>li{
+    list-style: none;
+}
+
+.recipe-data>ul>li>a:link{
+    color:green;
+    text-decoration: none;
+}
+
+.recipe-data>ul>li>a:hover{
+    color:#4CAF50;
+    text-decoration: underline;
+}
+
+.ingredientes{
+    column-count: 3;
+}
+
+.ingrediente{
+    width: 100%;
+    height: 200px;
+    display: inline-block;
+   border: 1px solid green;
+    background-color: #ccffcc;
+    margin-top: 5px;
+}
+
+.ingrediente>ul{
+}
+.ingrediente>ul>li{
+    list-style: none;
+}
+
+.instrucciones{
+    background-color: white;
+    border: 2px solid darkslategray;
+    padding: 10px 5px;
+    margin-top: 10px;
+}
+
+.recipe-image>img{
+    width: 200px;
+    height: 180px;
+    padding: 5px 5px;
+}
+

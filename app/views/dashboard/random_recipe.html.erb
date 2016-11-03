@@ -1,0 +1,70 @@
+<div class="query-info">
+  <strong>Receta aleatoria</strong>
+</div>
+
+
+<div class="random-recipe">
+  <% result.each do |receta|%>
+      <div class="recipe-info">
+        <div class="recipe-title">
+          <strong> <%= receta["title"]%></strong><br>
+          <span>Lista en <%= receta["readyInMinutes"]%> minutos</span><br>
+          <span>Cocina : <%= receta["cuisines"][0]%></span>
+          <hr>
+        </div>
+        <div class="recipe-data">
+        <ul>
+          <li>Vegetariana : <%= receta["vegetarian"] ? 'Si' : 'No' %></li>
+          <li>Vegana : <%=receta["vegan"] ? 'Si' : 'No' %></li>
+          <li>Libre de gluten : <%=receta["glutenFree"] ? 'Si' : 'No' %></li>
+          <li>Barata : <%=receta["cheap"] ? 'Si' : 'No' %></li>
+          <li>Popular : <%=receta["veryPopular"] ? 'Si' : 'No' %></li>
+          <li>Datos de preparación</li>
+          <li>Porciones : <%=receta["servings"]%></li>
+          <li>Tiempo de preparación : <%=receta["preparationMinutes"]%></li>
+          <li>Tiempo de preparación : <%=receta["preparationMinutes"]%></li>
+          <li>Tiempo de cocción : <%=receta["cookingMinutes"]%></li>
+          <li>URL: <a href="<%=receta["sourceUrl"]%>"><%=receta["sourceUrl"]%></a></li>
+        </ul>
+        </div>
+        <div class="recipe-image">
+          <img src="<%= receta["image"]%>" alt="[ ]">
+        </div>
+      </div>
+      <div class="ingredientes">
+      <% receta["extendedIngredients"].each do |ingrediente| %>
+      <div class="ingrediente">
+        <ul>
+              <li class="ing-id">
+                <strong>ID ingrediente :</strong> <%= ingrediente["id"] %>
+              </li>
+              <li class="ing-tipo">
+                <strong>Tipo : </strong><%= ingrediente["aisle"] %>
+              </li>
+              <li class="ing-img">
+                <img src="<%= ingrediente["image"] %>" alt="[ ]">
+              </li>
+              <li class="ing-name">
+                <strong>Nombre : </strong><%= ingrediente["name"] %>
+              </li>
+              <li class="ing-cant">
+                <strong>Cantidad :</strong> <%= ingrediente["amount"] %> <%= ingrediente["unit"] %>
+              </li>
+        </ul>
+      </div>
+      <%end%>
+      </div>
+
+
+      <div class="instrucciones">
+        <div class="page-header">
+          <strong>Instrucciones de preparación</strong>
+          <hr>
+        </div>
+        <div class="instrucciones-info">
+          <%=receta["instructions"]%>
+        </div>
+      </div>
+
+  <%end%>
+</div>

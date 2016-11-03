@@ -1,0 +1,17 @@
+<div class="query-info">
+  <strong>Ingredientes:</strong> <%=ingredientes%>
+</div>
+
+<div class="recetas">
+  <% result.each do |receta| %>
+   <div class="receta">
+    <ul class="ul-receta">
+      <li class="li-id">Id Receta :<%= receta["id"] %></li>
+      <li class="li-title"><%= receta["title"] %><hr></li>
+      <li class="li-image"><img src="<%= receta["image"] %>" alt="[]"></li>
+      <li>Ingredientes usados : <%= receta["usedIngredientCount"] %></li>
+      <li>Favorito : <%= receta["likes"] %></li>
+    </ul>
+   </div>
+  <% end %>
+</div>

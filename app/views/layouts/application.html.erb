@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PresentacionAPI</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navigation">
+      <nav class="menu">
+        <ul>
+          <li>
+            &#187;<a href="/dashboard">Información nutrimental</a>
+          </li>
+          <li>|</li>
+          <li>
+            &#187;<a href="/dashboard/find_by_ingredients">Buscar recetas</a>
+          </li>
+          <li>|</li>
+          <li>
+            &#187;<a href="/dashboard/random_recipe">Receta Aleatoria</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <%= yield %>
+  </body>
+</html>
